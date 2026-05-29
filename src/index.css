@@ -1,0 +1,109 @@
+/* === Design Tokens (docs/design-spec.md) === */
+:root {
+  /* Colors */
+  --color-primary: #4A90D9;
+  --color-primary-light: #E8F1FB;
+  --color-primary-dark: #3A7BC8;
+  --color-text: #1A1A1A;
+  --color-text-secondary: #666666;
+  --color-text-weak: #999999;
+  --color-bg: #F5F7FA;
+  --color-card: #FFFFFF;
+  --color-expense: #E85D75;
+  --color-income: #4CAF50;
+  --color-border: #EEEEEE;
+  --color-warning: #FF6B6B;
+
+  /* Typography */
+  --font-h1: 700 24px/1.3 system-ui, -apple-system, sans-serif;
+  --font-h2: 600 18px/1.3 system-ui, -apple-system, sans-serif;
+  --font-body: 400 16px/1.5 system-ui, -apple-system, sans-serif;
+  --font-small: 400 14px/1.5 system-ui, -apple-system, sans-serif;
+  --font-caption: 400 12px/1.5 system-ui, -apple-system, sans-serif;
+  --font-amount: 700 28px/1.3 system-ui, -apple-system, sans-serif;
+
+  /* Spacing (4px base) */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-xxl: 24px;
+
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 2px 4px rgba(74, 144, 217, 0.3);
+  --shadow-tabbar: 0 -2px 8px rgba(0, 0, 0, 0.06);
+
+  /* Border Radius */
+  --radius-card: 12px;
+  --radius-button: 8px;
+  --radius-input: 8px;
+
+  /* Touch */
+  --touch-min: 44px;
+  --list-item-min: 56px;
+  --input-height: 48px;
+}
+
+/* === Reset === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+#root {
+  height: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--color-bg);
+}
+
+button, a, [role="button"] {
+  touch-action: manipulation;
+}
+
+input, textarea, button, select {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollable page content */
+.page-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  padding-bottom: calc(64px + var(--spacing-lg) + env(safe-area-inset-bottom, 0px));
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}

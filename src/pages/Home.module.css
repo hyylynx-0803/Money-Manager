@@ -1,0 +1,210 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.title {
+  font: var(--font-h1);
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* ── Summary Cards ── */
+.summaryCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-md);
+}
+
+.card {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.cardLabel {
+  font: var(--font-small);
+  color: var(--color-text-secondary);
+}
+
+.cardAmount {
+  font: var(--font-amount);
+}
+
+.incomeCard .cardAmount {
+  color: var(--color-income);
+}
+
+.expenseCard .cardAmount {
+  color: var(--color-expense);
+}
+
+/* ── Budget ── */
+.budgetCard {
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-card);
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+}
+
+.budgetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font: var(--font-h2);
+  margin-bottom: var(--spacing-md);
+}
+
+.budgetRemain {
+  font: var(--font-small);
+  color: var(--color-primary);
+}
+
+.overBudget {
+  color: var(--color-warning);
+}
+
+.progressBar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--color-primary-light);
+  margin-bottom: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  background: var(--color-primary);
+  transition: width 0.3s ease;
+}
+
+.progressOver {
+  background: var(--color-warning);
+}
+
+.budgetHint {
+  font: var(--font-caption);
+  color: var(--color-text-weak);
+}
+
+/* Budget input */
+.budgetInputRow {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.budgetInput {
+  flex: 1;
+  height: 40px;
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-input);
+  background: var(--color-bg);
+  font: var(--font-body);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.budgetSaveBtn {
+  height: 40px;
+  padding: 0 var(--spacing-lg);
+  border-radius: var(--radius-button);
+  background: var(--color-primary);
+  color: #fff;
+  font: var(--font-body);
+  cursor: pointer;
+}
+
+.budgetSaveBtn:disabled {
+  background: var(--color-border);
+  color: var(--color-text-weak);
+}
+
+.budgetCancelBtn {
+  height: 40px;
+  padding: 0 var(--spacing-md);
+  font: var(--font-small);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+/* ── Recent ── */
+.recentCard {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  padding: var(--spacing-lg);
+}
+
+.recentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.recentTitle {
+  font: var(--font-h2);
+}
+
+.viewAll {
+  font: var(--font-small);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.recentSummary {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+
+.recentItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.recentLabel {
+  font: var(--font-caption);
+  color: var(--color-text-secondary);
+}
+
+.recentValue {
+  font: var(--font-h2);
+}
+
+.textIncome {
+  color: var(--color-income);
+}
+
+.textExpense {
+  color: var(--color-expense);
+}
+
+/* ── Add button ── */
+.addBtn {
+  width: 100%;
+  height: 56px;
+  border-radius: var(--radius-button);
+  background: var(--color-primary);
+  color: #fff;
+  font: var(--font-h2);
+  cursor: pointer;
+  box-shadow: var(--shadow-button);
+  transition: all 0.2s;
+}
+
+.addBtn:active {
+  background: var(--color-primary-dark);
+  transform: scale(0.98);
+}

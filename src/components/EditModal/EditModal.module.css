@@ -1,0 +1,169 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 200;
+}
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  background: var(--color-card);
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.title {
+  font: var(--font-h2);
+}
+
+.closeBtn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.body {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  padding-bottom: calc(var(--spacing-xxl) + env(safe-area-inset-bottom, 0));
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+/* ── Shared form styles ── */
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.label {
+  font: var(--font-small);
+  color: var(--color-text-secondary);
+}
+
+.amountRow {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.amountInput {
+  flex: 1;
+  height: var(--input-height);
+  font: var(--font-amount);
+  color: var(--color-text);
+  background: var(--color-bg);
+  border-radius: var(--radius-input);
+  padding: 0 var(--spacing-md);
+  text-align: center;
+}
+
+.unit {
+  font: var(--font-h2);
+  color: var(--color-text-secondary);
+}
+
+.typeToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-sm);
+}
+
+.typeBtn {
+  height: 40px;
+  border-radius: var(--radius-button);
+  font: var(--font-body);
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.typeActive {
+  background: var(--color-expense);
+  color: #fff;
+}
+
+.typeIncomeActive {
+  background: var(--color-income);
+  color: #fff;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--spacing-sm);
+}
+
+.catBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: var(--spacing-sm) 0;
+  border-radius: var(--radius-button);
+  background: var(--color-bg);
+  font: var(--font-caption);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.catActive {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+.catIcon { font-size: 20px; }
+.catName { font-size: 10px; }
+
+.dateInput,
+.noteInput {
+  height: var(--input-height);
+  padding: 0 var(--spacing-md);
+  border-radius: var(--radius-input);
+  background: var(--color-bg);
+  font: var(--font-body);
+  color: var(--color-text);
+}
+
+.saveBtn {
+  width: 100%;
+  height: 48px;
+  border-radius: var(--radius-button);
+  background: var(--color-primary);
+  color: #fff;
+  font: var(--font-h2);
+  cursor: pointer;
+  box-shadow: var(--shadow-button);
+}
+
+.saveBtn:disabled {
+  background: var(--color-border);
+  color: var(--color-text-weak);
+  box-shadow: none;
+}

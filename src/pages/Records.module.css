@@ -1,0 +1,251 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.title {
+  font: var(--font-h1);
+  color: var(--color-text);
+}
+
+/* ── Search ── */
+.searchBar {
+  background: var(--color-card);
+  border-radius: var(--radius-input);
+  padding: 0 var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  height: var(--input-height);
+  box-shadow: var(--shadow-card);
+}
+
+.searchIcon {
+  font-size: 16px;
+  opacity: 0.5;
+}
+
+.searchInput {
+  flex: 1;
+  height: 100%;
+  font: var(--font-body);
+  color: var(--color-text);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-weak);
+}
+
+.clearBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--font-caption);
+  color: var(--color-text-weak);
+  background: var(--color-bg);
+  cursor: pointer;
+}
+
+/* ── Filters ── */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.filterRow {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.filterBtn {
+  flex: 1;
+  height: 36px;
+  border-radius: var(--radius-button);
+  font: var(--font-small);
+  color: var(--color-text-secondary);
+  background: var(--color-card);
+  box-shadow: var(--shadow-card);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filterActive {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.categoryScroll {
+  display: flex;
+  gap: var(--spacing-sm);
+  overflow-x: auto;
+  padding-bottom: var(--spacing-xs);
+  -webkit-overflow-scrolling: touch;
+}
+
+.categoryScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.catFilterBtn {
+  flex-shrink: 0;
+  height: 30px;
+  padding: 0 var(--spacing-md);
+  border-radius: 15px;
+  font: var(--font-caption);
+  color: var(--color-text-secondary);
+  background: var(--color-card);
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.catFilterActive {
+  background: var(--color-primary-light);
+  color: var(--color-primary);
+}
+
+/* ── List ── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.item {
+  background: var(--color-card);
+  border-radius: var(--radius-card);
+  padding: var(--spacing-lg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-card);
+  min-height: var(--list-item-min);
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  flex: 1;
+  min-width: 0;
+}
+
+.itemIcon {
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.itemCategory {
+  font: var(--font-body);
+  font-weight: 600;
+}
+
+.itemNote {
+  font: var(--font-small);
+  color: var(--color-text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemDate {
+  font: var(--font-caption);
+  color: var(--color-text-weak);
+}
+
+.itemRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.itemAmount {
+  font: var(--font-h2);
+}
+
+.expense {
+  color: var(--color-expense);
+}
+
+.income {
+  color: var(--color-income);
+}
+
+.itemActions {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.actionBtn,
+.actionDel {
+  font: var(--font-caption);
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.actionBtn {
+  color: var(--color-primary);
+}
+
+.actionDel {
+  color: var(--color-expense);
+}
+
+.confirmRow {
+  display: flex;
+  gap: 4px;
+}
+
+.confirmYes,
+.confirmNo {
+  font: var(--font-caption);
+  padding: 2px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirmYes {
+  color: #fff;
+  background: var(--color-expense);
+}
+
+.confirmNo {
+  color: var(--color-text-secondary);
+  background: var(--color-bg);
+}
+
+/* ── Empty ── */
+.empty {
+  text-align: center;
+  padding: var(--spacing-xxl) 0;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-lg);
+}
+
+.emptyText {
+  font: var(--font-h2);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.emptyHint {
+  font: var(--font-small);
+  color: var(--color-text-weak);
+}
